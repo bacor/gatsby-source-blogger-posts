@@ -1,0 +1,62 @@
+{
+  "name": "gatsby-source-blogger-posts",
+  "version": "0.0.1",
+  "description": "A Gatsby source plugin that pulls blogposts from Blogger",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "build": "echo \"No build script setup\"",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier src test --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bacor/gatsby-source-blogger-posts"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "blogger"
+  ],
+  "author": "Bas Cornelissen (https://github.com/bacor)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bacor/gatsby-source-blogger-posts/issues"
+  },
+  "dependencies": {
+    "@googleapis/blogger": "^1.1.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "rehype-remove-empty-paragraph": "^0.2.4",
+    "rehype-stringify": "^9.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7"
+  },
+  "files": [
+    "./src/",
+    "./gatsby-node.mjs"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "transform": {}
+  }
+}
